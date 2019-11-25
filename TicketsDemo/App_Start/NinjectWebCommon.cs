@@ -11,8 +11,11 @@ namespace TicketsDemo.App_Start
     using TicketsDemo.Data.Repositories;
     using TicketsDemo.Domain.DefaultImplementations;
     using TicketsDemo.Domain.DefaultImplementations.PriceCalculationStrategy;
+    using TicketsDemo.Domain.BookingImplementations.PriceCalculationStrategy;
+    using TicketsDemo.Domain.UniversalImplementations.PriceCalculationStrategy;
     using TicketsDemo.Domain.Interfaces;
     using TicketsDemo.EF.Repositories;
+    using TicketsDemo.CSV;
 
     public static class NinjectWebCommon 
     {
@@ -65,7 +68,7 @@ namespace TicketsDemo.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<ITicketRepository>().To<TicketRepository>();
-            kernel.Bind<ITrainRepository>().To<TrainRepository>();
+            kernel.Bind<ITrainRepository>().To<TrainRepositoryCSV>();
 
             kernel.Bind<IRunRepository>().To<RunRepository>();
             kernel.Bind<IReservationRepository>().To<ReservationRepository>();
@@ -75,7 +78,7 @@ namespace TicketsDemo.App_Start
             kernel.Bind<IReservationService>().To<ReservationService>();
 
             //todo factory
-            kernel.Bind<IPriceCalculationStrategy>().To<DefaultPriceCalculationStrategy>();
+            kernel.Bind<IPriceCalculationStrategy>().To<UniversalPriceCalculationStrategy>();
             kernel.Bind<ILogger>().ToMethod(x =>
                 new FileLogger(HttpContext.Current.Server.MapPath("~/App_Data")));
         }        

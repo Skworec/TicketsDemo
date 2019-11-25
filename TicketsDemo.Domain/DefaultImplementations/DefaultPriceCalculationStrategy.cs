@@ -27,7 +27,7 @@ namespace TicketsDemo.Domain.DefaultImplementations.PriceCalculationStrategy
             var train = _trainRepository.GetTrainDetails(run.TrainId);
             var place = 
                 train.Carriages
-                    .Select(car => car.Places.SingleOrDefault(pl => 
+                    .Select(car => car.Places.FirstOrDefault(pl => 
                         pl.Number == placeInRun.Number && 
                         car.Number == placeInRun.CarriageNumber))
                     .SingleOrDefault(x => x != null);

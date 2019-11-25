@@ -65,7 +65,8 @@ namespace TicketsDemo.EF.Migrations
                           DefaultPrice = 130m,
                           Number = 4,
                       } 
-                  }
+                  },
+                  BookingId = 1
               },
               new Train
               {
@@ -89,7 +90,8 @@ namespace TicketsDemo.EF.Migrations
                           DefaultPrice = 40m,
                           Number = 3,
                       } 
-                  }
+                  },
+                  BookingId = 1
               }
 
             );

@@ -1,16 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{360ABF3D-281E-409C-AFCF-3D34F026678E}</ProjectGuid>
+    <ProjectGuid>{958B341E-1989-4F3F-A9B0-1BAD8D7CB0E2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TicketsDemo.Domain</RootNamespace>
-    <AssemblyName>TicketsDemo.Domain</AssemblyName>
+    <RootNamespace>TrainRepositoryCSV</RootNamespace>
+    <AssemblyName>TrainRepositoryCSV</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,27 +32,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BookingCalculation\BookingPriceCalculationStrategy.cs" />
-    <Compile Include="DefaultImplementations\FileLogger.cs" />
-    <Compile Include="DefaultImplementations\DefaultPriceCalculationStrategy.cs" />
-    <Compile Include="DefaultImplementations\ReservationService.cs" />
-    <Compile Include="DefaultImplementations\Schedule.cs" />
-    <Compile Include="DefaultImplementations\TicketService.cs" />
-    <Compile Include="Interfaces\IReservationService.cs" />
-    <Compile Include="Interfaces\ILogger.cs" />
-    <Compile Include="Interfaces\IPriceCalculationStrategy.cs" />
-    <Compile Include="Interfaces\ISchedule.cs" />
-    <Compile Include="Interfaces\ITicketService.cs" />
-    <Compile Include="UniversalPriceCalculation\UniversalPriceCalculationStrategy.cs" />
+    <Compile Include="TrainRepositoryCSV.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,11 +53,4 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

@@ -184,6 +184,10 @@
       <Project>{e9437256-3145-47bf-81a3-c69fd4de95f4}</Project>
       <Name>TicketsDemo.EF</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TrainRepositoryCSV\TicketsDemo.CSV.csproj">
+      <Project>{958b341e-1989-4f3f-a9b0-1bad8d7cb0e2}</Project>
+      <Name>TicketsDemo.CSV</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -18,5 +18,12 @@ namespace TicketsDemo.Data.Entities
         public Train Train { get; set; }
 
         public int Number { get; set; }
+
+        public override string ToString()
+        {
+            string returningStr = string.Format("{0}, {1}, {2}, {3}, {4}, {5}", Id, Type, DefaultPrice, Places, TrainId, Number);
+
+            return returningStr;
+        }
     }
 }

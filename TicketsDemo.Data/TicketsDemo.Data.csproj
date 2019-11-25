@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\TrainAggregate\BookingCompany.cs" />
     <Compile Include="Entities\TrainAggregate\Carriage.cs" />
     <Compile Include="Entities\TrainAggregate\Place.cs" />
     <Compile Include="Entities\RunAggregate\PlaceInRun.cs" />

@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201911181005164_8.cs" />
+    <Compile Include="Migrations\201911181005164_8.Designer.cs">
+      <DependentUpon>201911181005164_8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\BookingContext.cs" />
     <Compile Include="Migrations\201407072233415_1.cs" />
     <Compile Include="Migrations\201407072233415_1.Designer.cs">
       <DependentUpon>201407072233415_1.cs</DependentUpon>
@@ -113,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908261657446_7.resx">
       <DependentUpon>201908261657446_7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911181005164_8.resx">
+      <DependentUpon>201911181005164_8.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
